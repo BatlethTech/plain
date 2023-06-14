@@ -2,7 +2,9 @@ const selectBox = document.querySelector("#choose-option");
 const placeHolder = document.querySelector("#pre-value");
 
 selectBox.addEventListener("change", () => {
-    const val = selectBox.val;
+    const val = selectBox.value;
+    console.log("Change event", val);
+
     updateDisplay(val);
 });
 
@@ -10,10 +12,10 @@ function updateDisplay(val) {
     let url = "";
     switch (val) {
         case "1":
-            url = "assets/one.txt";
+            url = "https://batlethtech.github.io/plain/fetch/assets/one.txt";
             break;
         case "2":
-            url = "assets/two.txt";
+            url = "https://batlethtech.github.io/plain/fetch/assets/two.txt";
             break;
         default:
             break;
